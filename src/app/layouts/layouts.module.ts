@@ -20,10 +20,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { ModalModule } from './modal/modal.module';
 import { ModalService } from './modal/modal.service';
-import { ContextMenuModule } from '@perfectmemory/ngx-contextmenu';
+// import { ContextMenuModule } from '@perfectmemory/ngx-contextmenu';
 
 const module = [
-  ContextMenuModule,
+  // ContextMenuModule,
   CommonModule,
   TranslateModule,
   RouterModule,
