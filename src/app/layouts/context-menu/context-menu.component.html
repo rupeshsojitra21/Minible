@@ -1,0 +1,131 @@
+<!-- <span [contextMenu]="oneContextMenu">{{text}}</span>
+
+<context-menu #oneContextMenu [disabled]="!adminPermissions.label && ! adminPermissions.permission">
+  <ng-template contextMenuItem (execute)="Language(key)" [visible]="adminPermissions.label">Label Change</ng-template>
+  <ng-template contextMenuItem (execute)="Permission(key)" [visible]="adminPermissions.permission">Permission
+  </ng-template>
+</context-menu> -->
+
+<!-- <jw-modal [id]="'language'+ key">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content px-2 shadow" style="border-radius: 8px; box-shadow: 1px 0px 17px 10px rgba(0,0,0,0.75);">
+      <div class="modal-header" style="padding: 0px !important; ">
+        <h4 class="modal-title" style="padding-top: 1rem; padding-bottom: 1rem;">Edit Label</h4>
+        <a (click)="closeModal('language')">
+          <i class="fa fa-delete"></i>
+        </a>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="col-form-label">Selected language:<span
+              style="margin-left: 1rem;">{{languageSelected}}</span></label>
+        </div>
+        <div class="form-group">
+          <label class="col-form-label">Code:<span style="margin-left: 1rem;">{{editlanguage.key}}</span></label>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" style="color:black" autofocus [(ngModel)]="editlanguage.text"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <div class="modal-footer" style="padding: 0px !important;">
+        <div class="py-2">
+          <button type="button" class="btn btn-primary mr-1" (click)="saveLanguage()"><i class="fa fa-trash"></i>
+            Save
+          </button>
+          <button type="button" class="btn btn-warning " (click)="closeModal('language'+ key)"><i
+              class="fa fa-check"></i>
+            Close
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</jw-modal>
+
+<jw-modal [id]="'permission'+ key">
+  <div class="modal-content px-2 shadow" style="border-radius: 8px; box-shadow: 1px 0px 17px 10px rgba(0,0,0,0.75);">
+    <div class="modal-header" style="padding: 0px !important; ">
+      <h4 class="modal-title" style="padding-top: 1rem; padding-bottom: 1rem;">Edit Permission</h4>
+      <a (click)="closeModal('permission')">
+        <i class="feather icon-x"></i>
+      </a>
+    </div>
+    <div class="modal-body">
+      <div class="col-md-12" style="margin-top: 1rem;">
+        <form>
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">
+                Assign Permission:<span style="margin-left: 1rem;">{{Permissionkey}}</span>
+              </h4>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <h4>Group</h4>
+                  <div class="table-responsive ps" style="overflow-y: scroll; height: 300px;">
+                    <table class="table">
+                      <thead class="text-primary">
+                        <tr>
+                          <th class="text-center">Group Name</th>
+                          <th class="text-center">Allow Edit</th>
+                          <th class="text-center"> Allow View</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of permissionData;">
+                          <td *ngIf="item.sec_type == 1">{{item.name}}</td>
+                          <td *ngIf="item.sec_type == 1"><input [checked]="item.allow_edit == 1"
+                              [(ngModel)]="item.allow_edit" [ngModelOptions]="{standalone: true}" type="checkbox"></td>
+                          <td *ngIf="item.sec_type == 1"><input [checked]="item.allow_view ==1"
+                              [(ngModel)]="item.allow_view" [ngModelOptions]="{standalone: true}" type="checkbox"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <h4>User</h4>
+                  <div class="table-responsive ps" style="overflow-y: scroll; height: 300px;">
+                    <table class="table">
+                      <thead class="text-primary">
+                        <tr>
+                          <th class="text-center">User Name</th>
+                          <th class="text-center">Allow Edit</th>
+                          <th class="text-center">Allow View</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of permissionData;">
+                          <td *ngIf="item.sec_type == 2">{{item.name}}</td>
+                          <td *ngIf="item.sec_type == 2"><input [checked]="item.allow_edit == 1"
+                              [(ngModel)]="item.allow_edit" [ngModelOptions]="{standalone: true}" type="checkbox"></td>
+                          <td *ngIf="item.sec_type == 2"><input [checked]="item.allow_view"
+                              [(ngModel)]="item.allow_view" [ngModelOptions]="{standalone: true}" type="checkbox"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer" style="padding: 0px !important;">
+      <div class="py-2">
+        <button type="button" class="btn btn-primary mr-1" (click)="savePermission()"><i class="fa fa-trash"></i>
+          Save
+        </button>
+        <button type="button" class="btn btn-warning " (click)="closeModal('permission'+ key)"><i
+            class="fa fa-check"></i>
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+</jw-modal> -->

@@ -17,18 +17,29 @@ import { HorizontalComponent } from './horizontal/horizontal.component';
 import { VerticalComponent } from './vertical/vertical.component';
 import { HorizontaltopbarComponent } from './horizontaltopbar/horizontaltopbar.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { ContextMenuComponent } from './context-menu/context-menu.component';
+import { ModalModule } from './modal/modal.module';
+import { ModalService } from './modal/modal.service';
+import { ContextMenuModule } from '@perfectmemory/ngx-contextmenu';
+
+const module = [
+  ContextMenuModule,
+  CommonModule,
+  TranslateModule,
+  RouterModule,
+  NgbDropdownModule,
+  ClickOutsideModule,
+  SimplebarAngularModule,
+  UiSwitchModule,
+  ModalModule
+];
 
 @NgModule({
   // tslint:disable-next-line: max-line-length
-  declarations: [LayoutComponent, SidebarComponent, TopbarComponent, FooterComponent, RightsidebarComponent, HorizontalComponent, VerticalComponent, HorizontaltopbarComponent],
+  declarations: [LayoutComponent, SidebarComponent, TopbarComponent, FooterComponent, RightsidebarComponent, HorizontalComponent, VerticalComponent, HorizontaltopbarComponent, ContextMenuComponent],
   imports: [
-    CommonModule,
-    TranslateModule,
-    RouterModule,
-    NgbDropdownModule,
-    ClickOutsideModule,
-    SimplebarAngularModule,
-    UiSwitchModule
-  ]
+    ...module
+  ],
+  providers: [ModalService]
 })
 export class LayoutsModule { }

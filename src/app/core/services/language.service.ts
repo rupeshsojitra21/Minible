@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { CookieService } from 'ngx-cookie-service';
+import { dropList, language } from '../models/apiService.model';
+import { Subject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
   public languages: string[] = ['en', 'es', 'de', 'it', 'ru'];
+  $language = new Subject<language>();
 
   constructor(public translate: TranslateService, private cookieService: CookieService) {
     let browserLang;
@@ -21,6 +24,14 @@ export class LanguageService {
   public setLanguage(lang) {
     this.translate.use(lang);
     this.cookieService.set('lang', lang);
+  }
+
+  public setLanguageYoh(languageData: language) {
+    this.$language.next(languageData);
+  }
+
+  public setDropListYoh(dropListData: dropList) {
+    this.$language.next(dropListData);
   }
 
 }

@@ -9,6 +9,7 @@ import { environment } from '../../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 import { LanguageService } from '../../core/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
+import { User } from 'src/app/models/user/user.model';
 
 @Component({
   selector: 'app-topbar',
@@ -27,6 +28,7 @@ export class TopbarComponent implements OnInit {
   flagvalue: any;
   countryName: any;
   valueset;
+  LoginUserName!: string;
 
   constructor(@Inject(DOCUMENT) private document: any,
     private router: Router,
@@ -67,6 +69,8 @@ export class TopbarComponent implements OnInit {
     } else {
       this.flagvalue = val.map(element => element.flag);
     }
+    let data = JSON.parse(localStorage.getItem('currentToken')!) as User;
+    this.LoginUserName = data.user_firstname + ' ' + data.user_lastname;
   }
 
   /**

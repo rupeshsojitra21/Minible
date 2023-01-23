@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AuthRoutingModule } from './auth-routing';
 import { PasswordresetComponent } from './passwordreset/passwordreset.component';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [LoginComponent, SignupComponent, PasswordresetComponent],
@@ -17,7 +18,8 @@ import { PasswordresetComponent } from './passwordreset/passwordreset.component'
     ReactiveFormsModule,
     NgbAlertModule,
     UIModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    NgbDropdownModule
   ]
 })
 export class AuthModule { }

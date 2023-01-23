@@ -27,7 +27,6 @@ import { LoaderService } from '../core/services/loader.service';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ChatComponent } from './chat/chat.component';
 
-
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
   interactionPlugin,
