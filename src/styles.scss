@@ -10,7 +10,5 @@
 
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
-
-
-
-  
+@import '@angular/cdk/overlay-prebuilt.css';
+@import './node_modules/@perfectmemory/ngx-contextmenu/src/assets/stylesheets/base.scss';
